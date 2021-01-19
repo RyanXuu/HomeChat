@@ -1,3 +1,5 @@
+// The login page that renders if no id is created 
+
 import React, { useRef } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import { v4 as uuidV4 } from 'uuid';
@@ -11,6 +13,7 @@ const Login = ({ onIdSubmit }) => {
     onIdSubmit(idRef.current.value);
   }
 
+  //Creates a new id 
   const createNewId = (e) => {
     onIdSubmit(uuidV4())
   }
